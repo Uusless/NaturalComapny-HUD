@@ -1,0 +1,279 @@
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+* {
+    ---ColorBarInHud: rgb(79, 49, 160);
+    ---BackgroundInContainer: rgba(0, 0, 0, 0.894);
+    ---ColorIcon: white;
+}
+.lg {
+    position: absolute;
+    width: 2.5%;
+    height: 5%;
+    right: 0%;
+    top: 4%;
+    margin-right: 1vw;
+}
+.HUD {
+    position: absolute;
+    bottom: 0.1vw;
+    right: 1%;
+    width: 1%;
+    height: 20%;    
+}
+
+.container {
+    position: relative;
+    background: var(---BackgroundInContainer);
+    box-shadow: 0 0 0.25vw var(---BackgroundInContainer);
+    border-radius: 0.2vw;
+    margin-bottom: 0.25vw;
+    height: 15.5%;
+    width: 160%;
+}
+
+.br {
+    position: absolute;
+    background: var(---ColorBarInHud);
+    box-shadow: 0 0 0.35vw var(---ColorBarInHud);
+    border-radius: 0.25vw;
+    height: 50%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0%;
+}
+
+#voicecount {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.894);
+    box-shadow: 0 0 0.25vw rgba(0, 0, 0, 0.894);
+    border-radius: 0.25vw;
+    left: 1%;
+    bottom: 2%;
+    height: 3.5%;
+    width: 2%;
+}
+#voice {
+    height: 100%;
+    width: 100%;
+}
+
+#voiceicn {
+    position: absolute;
+    color: var(---ColorIcon);
+    text-shadow: 0.08vw 0vw black, -0.08vw 0vw black;
+    top: 25%;
+    left: 25%;
+    font-size: 1vw;
+}
+#icon {
+    position: absolute;
+    color: white;
+    text-shadow: 0.08vw 0vw black, -0.08vw 0vw black;
+    margin-left: 0.3vw; 
+    margin-top: 0.3vw;
+    margin-bottom: 0.3vw; 
+    font-size: 1vw;
+}
+
+
+@keyframes contspawn {
+    0% {
+        -webkit-transform: translateX(-2vw);
+                transform: translateX(-2vw);
+        -webkit-animation-timing-function: ease-in;
+                animation-timing-function: ease-in;
+        opacity: 0;
+      }
+      100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-animation-timing-function: ease-out;
+                animation-timing-function: ease-out;
+      }
+    }
+
+    @keyframes contdrop {
+        0% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+
+          }
+          100% {
+            -webkit-transform: translateX(-2vw);
+            transform: translateX(-2vw);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+                opacity: 0;
+                display: none;
+          }
+        }
+
+
+
+        @keyframes vctr {
+            from {
+                box-shadow: 0 0 0.35vw var(---ColorBarInHud);
+                background-color: var(---ColorBarInHud);
+            }
+            to {
+                box-shadow: 0 0 2.5vw rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        @keyframes vcfl {
+            from {
+                box-shadow: 0 0 2.5vw rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            to {
+                box-shadow: 0 0 0.35vw var(---ColorBarInHud);
+                background-color: var(---ColorBarInHud);
+            }
+        }
+
+        @keyframes inMap {
+            from  {
+                left: 5%;
+            }
+            to {
+                left: 45%;
+            }
+        }
+
+        @keyframes notMap {
+            from  {
+                left: 45%;
+            }
+            to {
+                left: 5%;
+            }
+        }
+
+        @keyframes IconScale {
+            from {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.25);
+            }
+        }
+.CHUD {
+    position: absolute;
+    bottom: 0.1vw;
+    left: 5%;
+    width: 25%;
+    height: 20%;
+}
+.carhud {
+    position: relative;
+    top: 15%;
+    background: transparent;
+    border-radius: 0.25vw;
+    width: 50%;
+    height: 60%;
+}
+
+@font-face {
+    font-family: km;
+    src: url('font/km.ttf');
+}
+.km {
+    position: absolute;
+    top: 25%;
+    left: 38%;
+    color: white;
+    text-shadow: 0.08vw 0vw black, -0.08vw 0vw black, 0vw 0.1vw black, 0vw -0.1vw black, 0vw 0vw 0.35vw black;
+    font-family: km;
+    font-size: 2vw; 
+}
+.kmh {
+    position: absolute;
+    top: 45%;
+    left: 60%;
+    color: var(---ColorIcon);
+    text-shadow: 0.08vw 0vw black, -0.08vw 0vw black, 0vw 0.1vw black, 0vw -0.1vw black, 0vw 0vw 0.35vw black;
+    font-family: km;
+    font-size: 0.5vw; 
+}
+
+.rpm {
+    position: relative;
+    height: 5%;
+    width: 50%;
+    top: 75%;
+    left: 25%;
+    background: black;
+    border-radius: 0.15vw;
+}
+
+.rpmbl {
+    position: relative;
+    background: var(---ColorBarInHud);
+    box-shadow: 0 0 0.5vw var(---ColorBarInHud);
+    height: 100%;
+}
+
+#right {
+    position: absolute;
+    border-radius: 0.35vw;
+    left: 48.8%;
+    width: 25%;
+}
+
+#left {
+    position: absolute;
+    border-radius: 0.35vw;
+    right: 48.5%;
+    width: 25%;
+}
+
+.containerchud {
+    position: relative;
+    background: var(---ColorBarInHud);
+    box-shadow: 0 0 0.25vw var(---ColorBarInHud);
+    border-radius: 0.25vw;
+    margin-bottom: 0.25vw;
+    height: 25%;
+    width: 12.5%;
+}
+
+.containerchud {
+    position: relative;
+    background: var(---ColorBarInHud);
+    box-shadow: 0 0 0.25vw var(---ColorBarInHud);
+    border-radius: 0.25vw;
+    margin-top: 0.8vw;
+    margin-left: 0.25vw;    
+    height: 25%;
+    width: 12.5%;
+}
+
+#gearcount {
+    position: absolute;
+    top: 8%;
+    left: 57%;
+}
+
+#gear {
+    height: 100%;
+    width: 100%;
+}
+
+.gearrount {
+    position: relative;
+    font-family: km;
+    font-size: 0.45vw;
+    color: var(---ColorIcon);
+    text-shadow: 0.03vw 0vw black, -0.03vw 0vw black, 0vw 0.03vw black, 0vw -0.03vw black, 0vw 0vw 0.35vw black;;
+    text-align: center;
+    transform: scale(2);
+}
