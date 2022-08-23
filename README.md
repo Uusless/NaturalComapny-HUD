@@ -30,5 +30,5 @@ We have to replace the logoUI.png with your image, the image has to be 50x50px.
 https://streamable.com/a77xi5
 
 
-![unknown](https://user-images.githubusercontent.com/109195967/178799458-c490aeb5-663f-434f-90ed-294e94a11a40.png)
-![unknown (1)](https://user-images.githubusercontent.com/109195967/178799497-1b13c0fc-7954-44ea-9738-7d7a11275983.png)
+![unknown](https://cdn.discordapp.com/attachments/1011477826156896256/1011640829267423262/unknown.png)
+
