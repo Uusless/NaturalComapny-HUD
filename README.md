@@ -27,7 +27,7 @@ To change logo html/src/png/logoUI.png
 
 We have to replace the logoUI.png with your image, the image has to be 50x50px.
 
-https://streamable.com/n0bk5q
+https://streamable.com/a77xi5
 
 
 ![unknown](https://user-images.githubusercontent.com/109195967/178799458-c490aeb5-663f-434f-90ed-294e94a11a40.png)
